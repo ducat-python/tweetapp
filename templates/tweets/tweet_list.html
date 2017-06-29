@@ -8,6 +8,8 @@ Tweet List
 {% for object in object_list %}
 
     <p>{{ object.tweets }}</p>
+    <a href="{% url 'tweets:detail' object.pk %}">detail</a>
+    <a href="{% url 'tweets:update' object.pk %}">update</a>
 
     {% endfor %}
 {% endblock %}

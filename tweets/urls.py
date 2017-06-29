@@ -1,9 +1,13 @@
 from django.conf.urls import url
 
-from .views import tweet_list
+from .views import TweetListView, TweetDeleteView, TweetDetailView, TweetCreateView, TweetUpdateView
 
 urlpatterns = [
 
-    url(r'^list/', tweet_list, name='list')
+    url(r'^list/', TweetListView.as_view(), name='list'),
+    url(r'^create/', TweetCreateView.as_view(), name='create'),
+    url(r'^detail/(?P<pk>\d+)$', TweetDetailView.as_view(), name='detail'),
+    url(r'^update/(?P<pk>\d+)$', TweetUpdateView.as_view(), name='update'),
+    url(r'^update/(?P<pk>\d+)$', TweetUpdateView.as_view(), name='update'),
 
 ]
