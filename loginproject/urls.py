@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^tweets/', include('tweets.urls', namespace='tweets')),
+    url(r'^blogs/', include('blogs.urls', namespace='blogs')),
 ]
